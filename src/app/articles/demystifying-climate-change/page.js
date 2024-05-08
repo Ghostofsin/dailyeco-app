@@ -18,7 +18,7 @@ export const metadata = {
     url: `${process.env.ARTICLE_LINK_URL}/articles/demystifying-climate-change`,
     title: 'Заголовок_для_article_1',
     description: 'Описание_для_article_1',
-    images: ['/images/article/discuss-Earth.png'],
+    images: [`${process.env.ARTICLE_LINK_URL}/images/article/discuss-Earth.png`],
   },
 };
 
@@ -93,7 +93,7 @@ export default function FirstArticlePage() {
               <div className={styles.articleInfo}>
                 <div className={styles.articleInfoDetails}>
                   <div>By Maxim Verde</div>
-                  <div>Updated: 20.07.2023</div>
+                  <div>Updated: 09.05.2024</div>
                   <div>Reviewed by Alex Kopi</div>
                 </div>
                 <div className={styles.articleInfoDetails}>
