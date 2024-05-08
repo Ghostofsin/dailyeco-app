@@ -5,11 +5,12 @@ import styles from './socialMedia.module.css'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation';
 
+
 const socialMediaList = [
   {
-    title: "VK",
-    path: "/images/social-media/VK.svg",
-		link: "https://vk.com/share.php?url=URL_PAGE_TO_SHARE&Read%20this%20%20cool%20article" 
+    title: "Linkedin",
+    path: "https://www.svgrepo.com/show/303207/linkedin-icon-logo.svg",
+		link: "https://www.linkedin.com/shareArticle?mini=true&url=URL_PAGE_TO_SHARE&title=Read%20this%20%20cool%20article"
   },
 	{
     title: "Telegram",
@@ -32,12 +33,13 @@ const socialMediaList = [
 
 export default function SocialMedia() { 
 	const pathname = usePathname()
+
 	return (
 		<div >
-
 		<ul className={styles.networksBlockPics}>
 		{socialMediaList.map((item) => (
 			<li key={item.title}>
+		
 				<Link href={item.link?.replace("URL_PAGE_TO_SHARE", `${process.env.ARTICLE_LINK_URL}${pathname}` )} target='_blank'>
 				<Image
 					src={item.path}
@@ -51,30 +53,6 @@ export default function SocialMedia() {
 				))}
 		</ul>
 
-		{/* <Image
-			src="/images/social-media/VK.svg"
-			width={28}
-			height={28}
-			alt="VK"
-		></Image>
-		<Image
-			src="/images/social-media/OK.svg"
-			width={28}
-			height={28}
-			alt="OK"
-		></Image>
-		<Image
-			src="/images/social-media/WhatsApp.svg"
-			width={28}
-			height={28}
-			alt="WhatsApp"
-		></Image>
-		<Image
-			src="/images/social-media/Telegram.svg"
-			width={28}
-			height={28}
-			alt="Telegram"
-		></Image> */}
 	</div>
 	)
 }

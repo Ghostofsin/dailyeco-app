@@ -1,10 +1,11 @@
 import { baloo } from "@/ui/fonts";
 import "@/ui/globals.css";
 import "@/ui/customInputs.css";
-import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
 import { WebVitals } from "@/components/web-vitals/web-vitals";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
+import GoogleAnalytics from "@/components/googleAnalytics/GoogleAnalytics";
+
 
 export const metadata = {
   title: {
@@ -17,6 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
       <body className={baloo.className}>
         <WebVitals />
         {children}

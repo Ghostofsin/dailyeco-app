@@ -11,15 +11,22 @@ import Discuss from "../../../../public/images/article/discuss-Earth.png";
 import Bandits from "../../../../public/images/article/bandits.png";
 import QuizButtonBlock from "@/components/articles/rigthPanel/quizButtonBlock/QuizButtonBlock";
 import ArticleContents from "@/components/articles/rigthPanel/articleContents/ArticleContents";
-import SocialMedia from "@/components/articles/socialMedia/SocialMedia";
-import ReadNext from "@/components/articles/readNext/ReadNext";
+
 import QuoteAuthor from "@/components/articles/quoteAuthor/QuoteAuthor";
 import ArticleMetaEnd from "@/components/articles/articleMetaEnd/ArticleMetaEnd";
 
 export const metadata = {
   title: "first article",
   description: "first article description",
+  openGraph: {
+    type: 'website',
+    url: `${process.env.ARTICLE_LINK_URL}/articles/demystifying-climate-change`,
+    title: 'Заголовок_для_article_1',
+    description: 'Описание_для_article_1',
+    images: ['/images/article/discuss-Earth.png'],
+  },
 };
+
 
 const articlePartList = [
   {
@@ -51,6 +58,7 @@ const articlePartList = [
     path: "/articles/demystifying-climate-change#The-Final-Frontier",
   },
 ];
+
 
 export default function FirstArticlePage() {
   return (
