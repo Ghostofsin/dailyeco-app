@@ -27,12 +27,14 @@ export default function DropDownMenu() {
             onClick={() => setToggleDropdown(false)}
           >
             {menuItems.map((item) => (
-              <Link
+              <Link key={item.title}
                 href={item.path}
                 onClick={() => setToggleDropdown(false)}
               >
-                <li key={item.title}></li>
+                <li >
                 {item.title}
+                </li>
+                
               </Link>
             ))}
           </ul>

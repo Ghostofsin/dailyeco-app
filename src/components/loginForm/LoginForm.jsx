@@ -16,7 +16,7 @@ export default function LoginForm() {
         />
         </Link>
         <span>Login in to your account</span>
-        <span>Don't have an account? Sign Up</span>
+        <span>{`Don't have an account? Sign Up`}</span>
         <form
           className={styles.loginForm}
           action={handleGoogleLogin}
