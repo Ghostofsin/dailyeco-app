@@ -18,12 +18,12 @@ export const menuItems = [
   },
   {
     title: "Blog",
-    path: "/blog",
+    path: "/articles/demystifying-climate-change",
   },
-  {
-    title: "About",
-    path: "/about",
-  },
+  // {
+  //   title: "About",
+  //   path: "/about",
+  // },
 ];
 
 export default function Header({ bgColor }) {

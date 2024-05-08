@@ -31,26 +31,26 @@ export const menuItems = [
     path: "/dashboard/footprint",
     icon: <GiFootprint />,
   },
-  {
-    title: "Challenges",
-    path: "/dashboard/challenges",
-    icon: <BiTask />,
-  },
-  {
-    title: "Blog",
-    path: "/dashboard/blog",
-    icon: <GiNewspaper />,
-  },
-  {
-    title: "Settings",
-    path: "/dashboard/settings",
-    icon: <MdOutlineSettings />,
-  },
-  {
-    title: "Help",
-    path: "/dashboard/help",
-    icon: <MdHelpCenter />,
-  },
+  // {
+  //   title: "Challenges",
+  //   path: "/dashboard/challenges",
+  //   icon: <BiTask />,
+  // },
+  // {
+  //   title: "Blog",
+  //   path: "/dashboard/blog",
+  //   icon: <GiNewspaper />,
+  // },
+  // {
+  //   title: "Settings",
+  //   path: "/dashboard/settings",
+  //   icon: <MdOutlineSettings />,
+  // },
+  // {
+  //   title: "Help",
+  //   path: "/dashboard/help",
+  //   icon: <MdHelpCenter />,
+  // },
 ];
 
 export default function SideBar({session}) { 
