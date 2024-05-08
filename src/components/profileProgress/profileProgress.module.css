@@ -1,0 +1,44 @@
+.element {
+  width: 80px;
+  height: 80px;
+  background: conic-gradient(#57cc99 5deg, #9e9e9e 5deg 360deg);
+  /* background: conic-gradient(
+    red 6deg,
+    orange 6deg 18deg,
+    yellow 18deg 45deg,
+    green 45deg 110deg,
+    blue 110deg 200deg,
+    purple 200deg
+  ); */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elementRing {
+  position: relative;
+  width: calc(100% - 10px); /* Радиус кольца */
+  height: calc(100% - 10px); /* Радиус кольца */
+  border-radius: 50%;
+  background-color: #19415c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 280px) and  (max-width: 379px) {
+  .element{
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+@media only screen and (min-width: 380px) and  (max-width: 479px) {
+  .element{
+    width: 60px;
+    height: 60px;
+  }
+
+}

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 3rem;
+  color: #d7395c;
+}
+
+.description {
+  font-size: 1rem;
+  color: #133145;
+}

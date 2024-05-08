@@ -1,113 +1,324 @@
+import Header from "@/components/header/Header";
+import styles from "./mainpage.module.css";
+import Link from "next/link";
 import Image from "next/image";
+import MainFooter from "@/components/footer/MainFooter";
+import MainPageSwiper from "@/components/swipers/mainPageSwiper/MainPageSwiper";
+import HeaderBg from "../../public/images/backgroung/Factories3.png"
+import MiddleBg from "../../public/images/backgroung/Pines.png"
+import BottomBg from "../../public/images/backgroung/forest-dark2.png"
+import Earth2 from "../../public/images/earth/earth2.png"
 
-export default function Home() {
+
+export const metadata = {
+  title: "Climate Change Mitigation Solutions | dailyEco",
+  description:
+    "Join the effort against climate change and environmental protection with dailyEco",
+};
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className={styles.container}>
+      <Header />
+
+      <section className={styles.siteHeader}>
+        <div className={styles.siteHeaderGrid}>
+          <h1 className={styles.title1}>
+            Take an Action against Climate Change
+          </h1>
+          <p></p>
+
+          <div>
+            <p className={styles.title2}>
+              Discover how to reduce CO2 emissions <br /> and your carbon
+              footprint
+            </p>
+          </div>
+          <p></p>
+          <Link
+            className={styles.button}
+            href="/problem"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <p>Get started</p>
+          </Link>
         </div>
+      </section>
+
+      <section>
+        <div style={{ display: 'flex', flexDirection: 'column'}}> 
+            <Image 
+              src={HeaderBg}     
+              sizes="100vw"
+              quality={100}
+              // Make the image display full width
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'cover',
+              }}
+              alt="head article forest pic"
+            ></Image>
+        </div>
+          {/* <div className={styles.topBackground}></div> */}
+      </section>
+
+      <main className={styles.mainSection}>
+      <div className={styles.mainContainer}>
+          <section className={styles.sectionAct}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={Earth2}
+                  alt="earth2"
+                  fill
+                  sizes="50vw"
+                  style={{
+                    objectFit: 'contain'  // cover, contain, none
+                  }}
+                />
+              </div>
+            <div className={styles.gridTextLeft}>
+              <h2>Reduce carbon emissions.</h2>
+              <p>
+                DailyEco offers solutions to help decrease carbon emissions and
+                benefit the environment. Explore a wide range of products and
+                services that enable you to contribute to climate change
+                mitigation.
+              </p>
+              <Link
+                href="/resources"
+                className={styles.learnMore}
+              >
+                Learn more
+              </Link>
+            </div>
+            <div className={`${styles.gridTextRight} ${styles.reverseCell}`}>
+              <h2>Protect the environment.</h2>
+              <p >
+                We believe that everyone can make a difference in environmental
+                protection. With DailyEco solutions, you can reduce your carbon
+                emissions and make your life or business more environmentally
+                sustainable.
+              </p>
+              <Link
+                href="/resources"
+                className={styles.learnMore}
+              >
+                Learn more
+              </Link>
+            </div>
+            <div className={styles.imageWrapperLeft}>
+            <Image
+                  src={Earth2}
+                  alt="earth2"
+                  fill
+                  sizes="50vw"
+                  style={{
+                    objectFit: 'contain'  // cover, contain, none
+                  }}
+                />
+            </div>
+             
+            <div className={styles.imageWrapper}>
+                <Image
+                  src={Earth2}
+                  alt="earth2"
+                  fill
+                  sizes="50vw"
+                  style={{
+                    objectFit: 'contain'  // cover, contain, none
+                  }}
+                />
+              </div>
+            {/* </div> */}
+            <div className={styles.gridTextLeft}>
+              <h2>Take responsibility.</h2>
+              <p>
+                Reducing carbon emissions is a collective task, and everyone can
+                contribute. With DailyEco solutions, you can take responsibility
+                for your emissions and be part of the global effort to combat
+                climate change.
+              </p>
+              <Link
+                href="/resources"
+                className={styles.learnMore}
+              >
+                Learn more
+              </Link>
+            </div>
+          
+          </section>
+          </div>
+      </main>
+
+      <section>
+        {/* <div className={styles.middleBackground}></div> */}
+        <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: "#133145"}}> 
+            <Image 
+              src={MiddleBg}     
+              sizes="100vw"
+              quality={100}
+              // Make the image display full width
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'cover',
+              }}
+              alt="head article forest pic"
+            ></Image>
+        </div>
+      </section>
+
+      <div className={styles.mainContainer}>
+        <section className={styles.sectionPros}>
+          <div className={styles.prosBlock}>
+            <div className={styles.prosBlockImage}>
+              <Image
+                src="/images/landing/sunrise.svg"
+                alt="wind-power img"
+                width="50"
+                height="50"
+              />
+              <h3>Opportunities for action.</h3>
+            </div>
+
+            <p>
+              DailyEco provides information on environmental protection methods
+              so you can take part in addressing climate change. Discover
+              recommendations and resources for implementing eco-friendly
+              practices into your daily life.
+            </p>
+          </div>
+
+          <div className={styles.prosBlock}>
+            <div className={styles.prosBlockImage}>
+              <Image
+                src="/images/landing/water-pollution.svg"
+                alt="water-pollution img"
+                width="50"
+                height="50"
+              />
+              <h3>Understanding the issue.</h3>
+            </div>
+
+            <p>
+              With DailyEco, you can gain a better understanding of the problem
+              of climate change and its impact on the environment. This will
+              enable you to make informed decisions and actively participate in
+              environmental protection.
+            </p>
+          </div>
+
+          <div className={styles.prosBlock}>
+            <div className={styles.prosBlockImage}>
+              <Image
+                src="/images/landing/wind-power.svg"
+                alt="water-pollution img"
+                width="50"
+                height="50"
+              />
+              <h3>Quick access to information.</h3>
+            </div>
+
+            <p>
+              Our product provides rapid access to information about climate
+              change, carbon emissions, and environmental protection methods.
+              Stay informed and empowered to make sustainable choices for a
+              better future.
+            </p>
+          </div>
+        </section>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className={styles.sectionReview}>
+        <h2>What people say about us</h2>
+        <div className={styles.sectionReviewContainer}>
+          <div className={styles.reviewBlock}>
+            <div className={styles.reviewerImage}>
+              <Image
+                className={styles.reviewerImage}
+                src="/images/noavatar.png"
+                alt="no avatar img"
+                width="100"
+                height="100"
+              />
+            </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <div className={styles.reviewer}>
+              <p className={styles.quote}>
+                "I am proud to be able to contribute to environmental protection
+                and reduce my carbon emissions."
+              </p>
+              <div className={styles.reviewerName}>Naomi Martinez</div>
+            </div>
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className={styles.reviewBlock}>
+            <div className={styles.reviewerImage}>
+              <Image
+                className={styles.reviewerImage}
+                src="/images/noavatar.png"
+                alt="no avatar img"
+                width="100"
+                height="100"
+              />
+            </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            <div className={styles.reviewer}>
+              <p className={styles.quote}>
+                "I was shocked to know real truth about our planet Earth.
+                dailyEco changed my life for sure."
+              </p>
+              <div className={styles.reviewerName}>Max Verde</div>
+            </div>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <div className={styles.reviewBlock}>
+            <div className={styles.reviewerImage}>
+              <Image
+                className={styles.reviewerImage}
+                src="/images/noavatar.png"
+                alt="no avatar img"
+                width="100"
+                height="100"
+              />
+            </div>
+
+            <div className={styles.reviewer}>
+              <p className={styles.quote}>
+                "This helped me better understand the issue of climate change
+                and take measures to address it."
+              </p>
+              <div className={styles.reviewerName}>Bella Johnson</div>
+            </div>
+          </div>
+          <div className={styles.swiper}>
+            <MainPageSwiper />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        {/* <div className={styles.bottomBackground}></div> */}
+        <div style={{ display: 'flex', flexDirection: 'column'}}> 
+            <Image 
+              src={BottomBg}     
+              sizes="100vw"
+              quality={100}
+              // Make the image display full width
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'cover',
+              }}
+              alt="head article forest pic"
+            ></Image>
+        </div>
+      </section>
+
+      <MainFooter
+        bgColor={"#133145"}
+        color={"#dffae2"}
+      />
+    </div>
   );
 }

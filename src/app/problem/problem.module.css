@@ -1,0 +1,317 @@
+.topBackground {
+  height: 380px;
+  width: 100%;
+
+  background-image: url("/images/backgroung/header-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bottomBackground {
+  height: 380px;
+  width: 100%;
+  background-image: url("/images/backgroung/Forest.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.siteHeader {
+  /* height: 260px; */
+  background-color: rgb(223, 250, 226);
+  padding-top: 60px;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.38;
+}
+.title1 {
+  color: #133145;
+}
+.title2 {
+  color: #d7395c;
+}
+
+.mainSection {
+  background-color: #133145;
+}
+
+.mainContainer {
+  max-width: 1280px;
+  min-width: 70vw;
+  margin: 0 auto;
+  /* padding: 0 auto; */
+}
+
+.sectionEvidence {
+  padding-bottom: 50px;
+  background-color: #133145;
+}
+.sectionEvidence h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: #d7395c;
+  line-height: 1.44;
+}
+
+.sectionEvidence p {
+  padding-top: 30px;
+  margin: 16px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: #8ab4f8;
+  line-height: 1.5;
+}
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.sectionConsequences {
+  padding: 100px 0 130px 0;
+  gap: 45px;
+}
+
+.flexConsequences{
+  display: flex;
+  margin: 20px;
+}
+
+.sectionConsequences p,
+.sectionCanDo p {
+  padding: 14px 8px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #8ab4f8;
+  line-height: 1.5;
+}
+
+.sectionConsequences h2,
+.sectionCanDo h3 {
+  padding: 14px 8px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #d7395c;
+  line-height: 1.38;
+}
+
+.gridTextLeft {
+  flex: 1;
+  text-align: left;
+}
+.gridTextRight {
+  flex: 1;
+  text-align: right;
+}
+
+.imageBlock{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic {
+  position: relative;
+  width: 330px;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+}
+
+.picCanDo{
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.breakline {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 2px;
+  margin-top: 8.5px;
+}
+
+.sectionCanDo {
+  width: 90%;
+  margin: 50px auto;
+  margin-bottom: 100px;
+}
+
+.textCanDo{
+  width: 50%;
+}
+
+.flex {
+  padding: 28px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.flexReverse {
+  padding: 28px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
+}
+
+.sectionCanDoHeader {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: #d7395c;
+  line-height: 1.44;
+}
+
+
+/* styles for small screen devices */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .title1,
+  .title2 {
+    text-align: center;
+    font-size: 48px;
+  }
+  .pic {
+    width: 180px;
+    height: 180px;
+  }
+  .picCanDo{
+    width: 180px;
+    height: 180px;
+  }
+  .sectionConsequences{
+    gap: 25px 5px;
+  }
+
+}
+
+/* styles for tablet devices */
+@media only screen and (min-width: 511px) and (max-width: 768px) {
+  .topBackground {
+    height: 250px;
+  }
+  .bottomBackground {
+    height: 200px;
+  }
+
+  .title1,
+  .title2 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .pic {
+    width: 150px;
+    height: 150px;
+  }
+  .picCanDo{
+    width: 150px;
+    height: 150px;
+  }
+
+  .sectionConsequences{
+    gap: 25px 5px;
+    padding: 60px 0 70px 0;
+  }
+
+  .sectionConsequences p,
+.sectionCanDo p {
+  padding: 14px 8px;
+  font-size: 16px;
+}
+
+.sectionConsequences h2,
+.sectionCanDo h3 {
+  padding: 14px 8px;
+  font-size: 20px;
+}
+
+.sectionEvidence h2{
+  font-size: 32px;
+    }
+
+.sectionCanDoHeader{
+  font-size: 32px;
+}
+
+}
+
+/* styles for mobile devices */
+@media only screen  and (max-width: 510px) {
+  .topBackground {
+    height: 200px;
+  }
+  .bottomBackground {
+    height: 150px;
+  }
+
+  .title1,
+  .title2,
+  .sectionCanDoHeader,
+  .sectionEvidence h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .sectionEvidence p{
+font-size: 18px;
+  }
+  .sectionEvidence h2{
+    font-size: 28px;
+      }
+
+      .sectionCanDoHeader{
+        font-size: 28px;
+      }
+
+  .pic {
+    width: 150px;
+    height: 150px;
+  }
+  .picCanDo{
+    width: 150px;
+    height: 150px;
+  }
+  .sectionConsequences{
+    gap: 25px 5px;
+    padding: 0;
+  }
+
+  .sectionConsequences p,
+.sectionCanDo p {
+  padding: 14px 8px;
+  font-size: 16px;
+}
+
+.sectionConsequences h2,
+.sectionCanDo h3 {
+  padding: 14px 8px;
+  font-size: 20px;
+}
+.imageBlock{
+display: none;
+}
+.textCanDo{
+  width: 100%;
+}
+.flexConsequences{
+  flex-direction: column ;
+}
+
+.flex {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.flexReverse {
+  padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
+}
+
+}

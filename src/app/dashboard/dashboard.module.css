@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+	background-color: #102b3d;
+}
+
+.menu {
+  flex: 1;
+  position: sticky;
+  min-height: 100vh;
+  min-width: 230px;
+}
+
+.content {
+  flex: 6;
+  padding: 20px;
+}
+
+.navbar {
+  display: block;
+}
+
+.navbarMobile {
+  display: none;
+}
+
+
+@media only screen  and (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+  .navbarMobile {
+    display: block;
+  }
+  .menu{
+    display: none;
+  }
+}

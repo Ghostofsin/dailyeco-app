@@ -1,0 +1,27 @@
+.articleContents{
+  margin-bottom: 30px;
+}
+
+.contentsHeader{
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.contentsList{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 0;
+}
+
+.contentsItem{
+  padding-left: 16px;
+  color: #7C8091;
+}
+
+.contentsItem:hover{
+  box-sizing: border-box;
+  color: #039bf8;
+  border-left: 2px solid #039bf8;
+}

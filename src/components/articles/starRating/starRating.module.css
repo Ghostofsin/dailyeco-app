@@ -1,0 +1,27 @@
+.starRating {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+  font-size: 24px;
+}
+
+.filledStar {
+  color: #FBBC04;
+	cursor: pointer;
+}
+
+.emptyStar {
+  color: #fff;
+	text-stroke: 1px #FBBC04;
+	-webkit-text-stroke:  1px #FBBC04;
+  cursor: pointer;
+}
+
+.emptyStar:hover {
+  color: #FBBC04;
+}
+
+.rate{
+	font-size: 24px;
+  line-height: 100%;
+}

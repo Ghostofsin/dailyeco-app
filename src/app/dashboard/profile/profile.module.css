@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  height: fit-content;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.content {
+  flex: 5;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: #19415c;
+  padding: 20px;
+}
+
+.cards {
+  flex: 1;
+  background-color: #19415c;
+  border-radius: 10px;
+}
+
+.content span {
+  color: white;
+  font-size: 20px;
+}
+
+.acheiveScreen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.progressPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* styles for small screen devices */
+@media only screen and  (max-width: 1120px) {
+  .cards{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 280px) and  (max-width: 479px) {
+  .progressPanel{
+    gap: 10px;
+  }
+
+}

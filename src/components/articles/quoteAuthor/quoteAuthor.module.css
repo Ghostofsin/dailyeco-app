@@ -1,0 +1,22 @@
+.quoteAuthor {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+.quoteAuthorPic {
+  border-radius: 50%;
+}
+.quoteAuthorName {
+  font-size: 16px;
+  font-weight: 500;
+}
+.quoteAuthorTitle {
+  color: #7c8091;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.circleImg {
+  border-radius: 50%;
+}

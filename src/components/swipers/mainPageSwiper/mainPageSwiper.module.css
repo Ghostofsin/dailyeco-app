@@ -1,0 +1,80 @@
+.sectionReviewContainer {
+  max-width: 1280px;
+  min-width: 50vw;
+  margin: auto auto;
+  display: flex;
+  gap: 50px;
+  background-color: white;
+}
+
+.reviewBlock {
+  display: flex;
+  width: 80%;
+  padding: 15px;
+  justify-content: center;
+}
+
+.reviewBlock {
+  /* position: relative; */
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+}
+
+.reviewBlock::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  background: linear-gradient(to left, #039bf8, #d7395c);
+  filter: blur(0px);
+  transform: translate3d(0px, 0px, -1px);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.reviewerImage {
+  position: relative;
+  flex: 1;
+  width: 100px;
+  height: 100px;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.reviewer {
+  flex: 4;
+  display: flex;
+  gap: 10px;
+  margin: 5px;
+  flex-direction: column;
+}
+
+.quote {
+  font-weight: 400;
+}
+
+.reviewerName {
+  font-weight: 500;
+  color: #d7395c;
+}
+
+/* styles for mobile devices */
+@media only screen and (min-width: 310px) and (max-width: 510px) {
+  .reviewBlock {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .reviewerImage {
+    height: 50px;
+    width: 50px;
+  }
+  .quote {
+    line-height: 1;
+  }
+  .reviewerName {
+    line-height: 1;
+  }
+}

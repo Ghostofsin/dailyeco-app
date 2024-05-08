@@ -1,0 +1,264 @@
+.container {
+  max-width: 1150px;
+
+}
+.mainBlock {
+  display: flex;
+  gap: 45px;
+}
+
+.articleBlock {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.headerBlock {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+.articleHeader {
+  box-sizing: border-box;
+  position: relative;
+  top: -35px;
+  max-width: 720px;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  margin: 0 40px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: lightgray 0px 10px 20px;
+}
+
+.articleName {
+  font-size: 40px;
+  font-weight: 500;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #d7395c, #039bf8);
+  background-clip: text;
+  color: transparent;
+  line-height: 110%;
+}
+
+.similarTopics {
+  display: flex;
+  gap: 2px;
+}
+.topic {
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 32px;
+  background-color: #f4f5fa;
+}
+
+.articleInfo, .articleInfoDetails{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  color: #7c8091;
+  font-size: 12px;
+}
+
+.picInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.floatingBlock {
+position: relative;
+}
+
+.stickyBlock{
+  position: sticky;
+  top: 56px;
+}
+
+
+.articleBlock p {
+  font-size: 20px;
+  line-height: 180%;
+  color: #333333;
+}
+
+.introParagraph {
+  margin: 56px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+}
+.baseParagraph {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.mainArticle{
+  width: 100%;
+  max-width: 800px;
+}
+
+.mainArticle h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+.mainArticle h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 48px;
+}
+
+/* .paragraphImage{
+  position: relative;
+  width: 800px;
+  height: 384px;
+} */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+  gap: 20px;
+}
+.listItem {
+  display: flex;
+  gap: 24px;
+}
+
+.blueBlock {
+  padding: 32px;
+  background: rgb(3 155 248 / 0.24);
+  border-radius: 24px;
+}
+
+.quote {
+  padding: 32px;
+  border-radius: 24px;
+  background-color: #f7f6fd;
+  margin: 40px 0;
+}
+
+.quoteHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.quoteLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.articleMetaEnd{
+  width: 100%;
+  max-width: 800px;
+}
+
+.footerBlock h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  margin-top: 54px;
+}
+
+.rightBar{
+  width: 100%;
+  max-width: 800px;
+  display: none;
+}
+
+
+
+/* styles for small screen devices */
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  .rightBar{
+    display: block;
+  }
+  
+  .floatingBlock {
+    display: none;
+  }
+  .buttonBlock span{
+    text-align: center;
+  }
+  .stickyBlock{
+    display: flex;
+    justify-content: space-around;
+  }
+  .articleBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+/* styles for tablet devices */
+@media only screen  and (max-width: 768px) {
+  .rightBar{
+    display: block;
+  }
+  
+  .floatingBlock {
+    display: none;
+  }
+  .buttonBlock span{
+    text-align: center;
+  }
+  .stickyBlock{
+    display: flex;
+    flex-direction: column;
+  }
+  .mainBlock{
+    gap: 0;
+  }
+  .articleName{
+    font-size: 22px;
+  }
+  .mainArticle h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+  .mainArticle h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 48px;
+  }
+  .articleBlock p {
+  font-size: 16px;}
+  .articleHeader {
+    margin: 0 0;}
+
+
+
+    .footerBlock h2{
+      font-size: 26px;
+    }
+   
+
+    .articleInfoDetails{
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: flex-start;
+      gap: 10px;
+    }
+}
+
+/* styles for mobile devices */
+/* @media only screen  and (max-width: 600px) {
+  .anotherBlock {
+    display: none;
+  }
+} */

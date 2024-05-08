@@ -1,0 +1,164 @@
+.mainSection {
+  background-color: #133145;
+}
+
+.mainContainer {
+  max-width: 1280px;
+  min-width: 70vw;
+  margin: 0 auto;
+  /* padding: 0 auto; */
+}
+
+.topBackground {
+  height: 380px;
+  width: 100%;
+  background-image: url("/images/backgroung/header-back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bottomBackground {
+  height: 380px;
+  width: 100%;
+  background-image: url("/images/backgroung/Forest.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.siteHeader {
+  height: 260px;
+  background-color: rgb(223, 250, 226);
+  padding-top: 60px;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.38;
+}
+.title1 {
+  color: #133145;
+}
+.title2 {
+  color: #d7395c;
+}
+
+.quizContainer {
+  max-width: 700px;
+  min-width: 30vw;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.quizHeader {
+	background-color: white;
+  border-radius: 5px;
+  padding: 24px;
+}
+.quizHeaderText {
+	font-size: 28px;
+}
+.quizHeadeSubText {
+	color: #d7395c;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.task {
+	position: relative;
+  background-color: white;
+  border-radius: 5px;
+  padding: 24px;
+  margin: 20px 0;
+}
+
+.task div label {
+	margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 15px;
+}
+.task div input {
+  margin: 0;
+	padding: 0;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.taskTitle {
+	margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.taskPoint {
+	position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  font-family: sans-serif;
+  color: gray;
+}
+.star {
+	color: #d7395c;
+}
+.taskQuestion {
+	display: flex;
+  flex-direction: column;
+}
+
+.options{
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	gap: 12px;
+	margin: 5px 0;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnSubmit {
+  box-sizing: border-box;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 50px;
+  background-color: #d7395c;
+  border-radius: 4px;
+  color: white;
+	font-size: 18px;
+  border-color: #d7395c;
+  border-style: solid;
+	cursor: pointer;
+}
+.btnReset {
+  box-sizing: border-box;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 50px;
+  color: #d7395c;
+	font-size: 18px;
+  border-radius: 4px;
+  background-color: #133145;
+  border-color: transparent;
+  border-style: solid;
+	cursor: pointer;
+}
+.btnReset:hover {
+  border-color: #d7395c;
+  border-style: solid;
+}
+
+
+/* styles for small screen devices */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {}
+
+/* styles for tablet devices */
+@media only screen and (min-width: 511px) and (max-width: 768px) {}
+
+/* styles for mobile devices */
+@media only screen and (min-width: 310px) and (max-width: 510px) {}

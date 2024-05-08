@@ -1,0 +1,37 @@
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tranportList select {
+  border-color: #5b5b5b;
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 3px;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+
+  background-color: #19415c;
+  color: rgb(223, 250, 226);
+  -webkit-appearance: none; /* for Safari */
+}
+
+.transportType {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.distance {
+  font-size: 16px;
+  width: 100%;
+}
+
+.footprint {
+  background: #19415c;
+  color: #838383;
+  border: none;
+  font-size: 16px;
+}

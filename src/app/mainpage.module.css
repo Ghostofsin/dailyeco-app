@@ -1,0 +1,500 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.topBackground {
+  height: 380px;
+  width: 100%;
+
+  background-image: url("/images/backgroung/header-back.png");
+  background-repeat: no-repeat;
+  /* background-color: #57cc99; */
+  background-position: center;
+  background-size: cover;
+}
+
+.middleBackground {
+  height: 220px;
+  width: 100%;
+
+  background-image: url("/images/backgroung/Pines.png");
+  background-repeat: no-repeat;
+  background-color: #133145;
+  background-position: center;
+  background-size: cover;
+}
+
+.bottomBackground {
+  height: 420px;
+  width: 100%;
+  background-image: url("/images/backgroung/forest-dark.png");
+  /* background-color: #22577a; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.siteHeader {
+  width: 100%;
+  /* background-color: #57cc99; */
+  padding-top: 100px;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.siteHeaderGrid {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  height: fit-content;
+}
+
+.title1 {
+  /* flex: 1; */
+  color: #133145;
+  font-size: 56px;
+  line-height: 1;
+}
+.title2 {
+  /* flex: 1; */
+  color: #d7395c;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.mainSection {
+  background-color: #133145;
+  padding: 0 50px;
+}
+
+.mainContainer {
+  max-width: 1280px;
+  min-width: 70vw;
+  margin: 0 auto;
+  /* padding: 0 auto; */
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.sectionAct {
+  padding: 100px 0 130px 0;
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, auto)); */
+  gap: 70px 150px;
+  align-items: center;
+}
+
+.sectionAct p {
+  padding: 14px 0px;
+  font-size: 28px;
+  font-weight: 400;
+  color: #8ab4f8;
+  line-height: 1.5;
+  /* background-color: #38a3a5; */
+  border-width: 0;
+  border-radius: 20px;
+  text-align: justify;
+}
+
+.sectionAct h2 {
+  padding: 14px 8px;
+  font-size: 42px;
+  font-weight: 500;
+  color: #d7395c;
+  line-height: 1.38;
+}
+
+.gridTextLeft {
+  text-align: left;
+}
+.gridTextRight {
+  text-align: right;
+}
+
+
+.imageWrapper, 
+.imageWrapperLeft{
+  position: relative;
+  height: 330px
+}
+
+.imageWrapperLeft img{
+  object-position: left;
+}
+
+.imageWrapper img{
+  object-position: right;
+}
+
+.learnMore {
+  font-size: 30px;
+  color: #039bf8;
+  text-decoration: underline;
+}
+
+.sectionPros {
+  width: 90%;
+  height: fit-content;
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  gap: 50px;
+  background-color: #dffae2;
+}
+
+.prosBlock {
+  flex: 1;
+  height: 100%;
+}
+
+.prosBlockImage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionPros p {
+  font-size: 18px;
+  border-width: 0;
+  border-radius: 10px;
+  color: #133145;
+  text-align: justify;
+}
+
+.sectionPros h3 {
+  padding: 14px 8px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #d7395c;
+  line-height: 1.38;
+}
+
+.sectionReview {
+  /* display: flex; */
+  justify-content: center;
+  padding: 70px 30px;
+  background-color: white;
+}
+
+.sectionReview h2 {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sectionReviewContainer {
+  max-width: 1280px;
+  min-width: 50vw;
+  margin: auto auto;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.reviewBlock {
+  display: flex;
+  width: 30%;
+  padding: 15px;
+}
+
+.reviewBlock {
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.reviewBlock::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  background: linear-gradient(to left, #039bf8, #d7395c);
+  filter: blur(0px);
+  transform: translate3d(0px, 0px, -1px);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.reviewer {
+  display: flex;
+  gap: 10px;
+  margin: 5px;
+  flex-direction: column;
+  /* justify-content: left; */
+}
+
+.reviewerImage {
+  border-radius: 50%;
+}
+
+.quote {
+  font-weight: 400;
+}
+
+.reviewerName {
+  font-weight: 500;
+  color: #d7395c;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #133145;
+  border-color: #133145;
+  border-radius: 20px;
+  border-style: solid;
+  box-sizing: border-box;
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+  text-decoration: none;
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.swiper {
+  display: none;
+  width: 100%;
+}
+
+/* styles for small screen devices */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .siteHeaderGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .title1,
+  .title2 {
+    text-align: center;
+  }
+  .sectionAct {
+    padding: 0 0 35px 0;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/1fr 1fr;
+    gap: 50px 80px;
+    align-items: center;
+  }
+
+  .sectionAct p {
+    font-size: 20px;
+  }
+  .sectionAct h2 {
+    font-size: 30px;
+  }
+  .learnMore {
+    font-size: 20px;
+  }
+
+  .imageWrapper{
+    position: relative;
+    height: 310px
+  }
+
+  .sectionPros {
+    gap: 30px;
+  }
+  .sectionPros p {
+    font-size: 16px;
+  }
+  .sectionPros h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .swiper {
+    display: block;
+  }
+  .reviewBlock {
+    display: none;
+  }
+}
+
+/* styles for tablet devices */
+@media only screen and (min-width: 511px) and (max-width: 768px) {
+  .topBackground {
+    height: 320px;
+  }
+  .middleBackground {
+    height: 250px;
+  }
+  .bottomBackground {
+    height: 250px;
+  }
+
+  .siteHeaderGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title1 {
+    text-align: center;
+    font-size: 42px;
+    line-height: 1;
+  }
+  .title2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .sectionAct {
+    padding: 0 0 65px 0;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/1fr 1fr;
+    gap: 20px 40px;
+    align-items: center;
+  }
+
+  .sectionAct p {
+    font-size: 16px;
+  }
+  .sectionAct h2 {
+    font-size: 20px;
+  }
+  .learnMore {
+    font-size: 20px;
+  }
+
+  .sectionPros {
+    gap: 30px;
+  }
+  .sectionPros p {
+    font-size: 14px;
+  }
+  .sectionPros h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .swiper {
+    display: block;
+  }
+  .reviewBlock {
+    display: none;
+  }
+}
+
+/* styles for mobile devices */
+@media only screen and (max-width: 510px) {
+  .topBackground {
+    height: 120px;
+  }
+  .middleBackground {
+    height: 50px;
+  }
+  .bottomBackground {
+    height: 150px;
+  }
+
+  .siteHeaderGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title1 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 1;
+  }
+  .title2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .sectionAct {
+    padding: 0;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .sectionAct div:nth-child(1) {
+    order: 1;
+  }
+  .sectionAct div:nth-child(2) {
+    order: 2;
+  }
+  .sectionAct div:nth-child(3) {
+    order: 4;
+  }
+  .sectionAct div:nth-child(4) {
+    order: 3;
+  }
+  .sectionAct div:nth-child(5) {
+    order: 5;
+  }
+  .sectionAct div:nth-child(6) {
+    order: 6;
+  }
+
+.mainSection{
+  padding: 0 14px;
+}
+  .sectionAct p {
+    font-size: 16px;
+  }
+  .sectionAct h2 {
+    font-size: 20px;
+  }
+  .learnMore {
+    font-size: 20px;
+  }
+
+  .imageWrapper{
+    position: relative;
+    height: 160px
+  }
+  .imageWrapperLeft{
+    position: relative;
+    height: 160px
+  }
+
+  .imageWrapperLeft img, .imageWrapper img{
+    object-position: center;
+  }
+
+  .sectionPros {
+    flex-direction: column;
+  }
+
+  .sectionPros {
+    gap: 30px;
+  }
+  .sectionPros p {
+    font-size: 14px;
+  }
+  .sectionPros h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .sectionReview h2 {
+    font-size: 20px;
+  }
+
+  .swiper {
+    display: block;
+  }
+  .reviewBlock {
+    display: none;
+  }
+
+}
+

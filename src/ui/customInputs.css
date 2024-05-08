@@ -1,0 +1,110 @@
+input {
+  min-width:  20px;
+  min-height: 20px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: grey;
+  width: 1.25em;
+  height: 1.25em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgb(215, 57, 92);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+  color: rgb(215, 57, 92);
+}
+
+input[type="radio"]:checked {
+  /* transform: scale(1);  */
+  color: rgb(215, 57, 92);
+}
+
+input[type="radio"]:hover:focus {
+  outline: max(10px, 0.15em) solid rgb(255, 220, 227);
+  /* outline-offset: max(2px, 0.15em); */
+}
+input[type="radio"]:hover {
+  outline: max(10px, 0.15em) solid rgb(255, 249, 250);
+  /* outline-offset: max(2px, 0.15em); */
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: grey;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 1em 1em white;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked {
+  color: rgb(215, 57, 92);
+  background-color: rgb(215, 57, 92);
+  transform: scale(1);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:hover:focus {
+  outline: max(8px, 0.15em) solid rgb(255, 220, 227);
+}
+
+input[type="checkbox"]:hover {
+  outline: max(8px, 0.15em) solid rgb(255, 249, 250);
+  /* transition: 120ms transform ease-in-out; */
+  /* outline-offset: max(2px, 0.15em); */
+}

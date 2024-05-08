@@ -6,7 +6,31 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'tn': {'min': '280px'},
+      
+      'xs': {'min': '480px'},
+   
+      'sm': {'min': '640px'},
+      // => @media (min-width: 640px and max-width: 767px) { ... }
+
+      'md': {'min': '768px'},
+      // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+      'lg': {'min': '1024px'},
+      // => @media (min-width: 1024px and max-width: 1279px) { ... }
+
+      'xl': {'min': '1280px'},
+      // => @media (min-width: 1280px and max-width: 1535px) { ... }
+
+      '2xl': {'min': '1536px'},
+      // => @media (min-width: 1536px) { ... }
+    },
     extend: {
+      colors:{
+        "fadedRed": "#d7395c",
+        "elephant": "#133145"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

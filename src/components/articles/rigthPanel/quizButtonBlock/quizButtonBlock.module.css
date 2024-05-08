@@ -1,0 +1,33 @@
+.buttonBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background-color: #133145;
+  border-radius: 32px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.quizButton{
+  display: flex;
+  justify-content: center;
+}
+
+/* styles for small screen devices */
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  .buttonBlock span{
+    text-align: center;
+    max-height: 200px;
+  }
+}
+
+/* styles for tablet devices */
+@media only screen  and (max-width: 768px) {
+
+  .buttonBlock span{
+    text-align: center;
+    max-height: 200px;
+  }
+}

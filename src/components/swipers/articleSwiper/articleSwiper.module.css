@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-width: 50vw;
+  /* margin: auto auto; */
+  display: flex;
+  gap: 50px;
+  background-color: white;
+}
+
+.customPrevButton, .customNextButton {
+  position: absolute;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ebebeb;
+  border-radius: 50%;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  cursor: pointer;
+}
+
+.customNextButton {
+  position: absolute;
+  top: 50%;
+  right: -48px;
+  background-image: url("/images/article/vector/arrow-right.svg");  
+}
+
+.customPrevButton {
+  position: absolute;
+  top: 50%;
+  left: -48px;
+  background-image: url("/images/article/vector/arrow-left.svg");  
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  .customNextButton {
+  right: -32px;}
+  .customPrevButton {
+    left: -32px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+  .customNextButton {
+  right: -15px;}
+  .customPrevButton {
+    left: -15px;
+  }
+}

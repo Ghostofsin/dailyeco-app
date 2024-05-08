@@ -1,0 +1,30 @@
+.ring{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: transparent;
+	border: 2px solid  #838383;
+	cursor: pointer;
+}
+
+.circle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	background: #838383;
+}
+
+.circle:hover{
+	background: #133145;
+}
+
+.ring:hover{
+	border-color:  #133145;;
+}
+
