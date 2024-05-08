@@ -1,11 +1,6 @@
-import QuizButton from "@/components/quizButton/QuizButton";
 import styles from "../article.module.css";
 import Image from "next/image";
-import Link from "next/link";
-// import RecommendedArticle from "@/components/articles/recommended/RecommendedArticle";
-import ArticleSwiper from "@/components/swipers/articleSwiper/ArticleSwiper";
-import StarRating from "@/components/articles/starRating/StarRating";
-import { createCookie, getCookie } from "@/lib/actions/cookieActions";
+
 import Earth from "../../../../public/images/article/blanket-Earth.png";
 import Discuss from "../../../../public/images/article/discuss-Earth.png";
 import Bandits from "../../../../public/images/article/bandits.png";
@@ -16,10 +11,10 @@ import QuoteAuthor from "@/components/articles/quoteAuthor/QuoteAuthor";
 import ArticleMetaEnd from "@/components/articles/articleMetaEnd/ArticleMetaEnd";
 
 export const metadata = {
-  title: "first article",
-  description: "first article description",
+  title: "Demystifying Climate Change: Your Essential Guide to the Planet's Hottest Topic",
+  description: "The topic that will not leave you indifferent and will help you understand the causes of global climate change  ",
   openGraph: {
-    type: 'website',
+    type: 'article',
     url: `${process.env.ARTICLE_LINK_URL}/articles/demystifying-climate-change`,
     title: 'Заголовок_для_article_1',
     description: 'Описание_для_article_1',
