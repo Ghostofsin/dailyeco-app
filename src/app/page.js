@@ -245,8 +245,8 @@ export default function HomePage() {
 
             <div className={styles.reviewer}>
               <p className={styles.quote}>
-                "I am proud to be able to contribute to environmental protection
-                and reduce my carbon emissions."
+                {`"I am proud to be able to contribute to environmental protection
+                and reduce my carbon emissions."`}
               </p>
               <div className={styles.reviewerName}>Naomi Martinez</div>
             </div>
@@ -265,8 +265,8 @@ export default function HomePage() {
 
             <div className={styles.reviewer}>
               <p className={styles.quote}>
-                "I was shocked to know real truth about our planet Earth.
-                dailyEco changed my life for sure."
+                {`"I was shocked to know real truth about our planet Earth.
+                dailyEco changed my life for sure."`}
               </p>
               <div className={styles.reviewerName}>Max Verde</div>
             </div>
@@ -285,8 +285,8 @@ export default function HomePage() {
 
             <div className={styles.reviewer}>
               <p className={styles.quote}>
-                "This helped me better understand the issue of climate change
-                and take measures to address it."
+                {`"This helped me better understand the issue of climate change
+                and take measures to address it."`}
               </p>
               <div className={styles.reviewerName}>Bella Johnson</div>
             </div>

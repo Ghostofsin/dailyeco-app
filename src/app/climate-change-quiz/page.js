@@ -210,8 +210,8 @@ export default async function ClimateChangeQuizPage() {
                       value="proxy-data"
                     />
                     <label htmlFor="quest3">
-                      By collecting "proxy data" from tree rings, ice cores and
-                      historical records
+                      {`By collecting "proxy data" from tree rings, ice cores and
+                      historical records`}
                     </label>
                   </div>
                   <div className={styles.options}>
@@ -391,8 +391,8 @@ export default async function ClimateChangeQuizPage() {
                       required
                     />
                     <label htmlFor="quest7">
-                      Greenhouse gases reflect the sun's energy, causing it to
-                      warm the Earth.
+                      {`Greenhouse gases reflect the sun's energy, causing it to
+                      warm the Earth.`}
                     </label>
                   </div>
                   <div className={styles.options}>
@@ -402,8 +402,8 @@ export default async function ClimateChangeQuizPage() {
                       value="gases-absorb"
                     />
                     <label htmlFor="quest7">
-                      Greenhouse gases absorb the sun's energy, slowing or
-                      preventing heat from escaping into space.
+                      {`Greenhouse gases absorb the sun's energy, slowing or
+                      preventing heat from escaping into space.`}
                     </label>
                   </div>
                   <div className={styles.options}>
@@ -424,8 +424,8 @@ export default async function ClimateChangeQuizPage() {
                       value="oceans-absorb"
                     />
                     <label htmlFor="quest7">
-                      Oceans absorb greenhouse gases, which cause the Earth's
-                      temperature to rise.
+                      {`Oceans absorb greenhouse gases, which cause the Earth's
+                      temperature to rise.`}
                     </label>
                   </div>
                 </div>

@@ -29,7 +29,7 @@ export default async function DashboardPage() {
       <div className={styles.content}>
 
         <div className={styles.contentTop}>
-          <span>User's answers</span>
+          <span>{`User's answers`}</span>
           <QuizButton text={result ? "Redo quiz" : "Get quiz"}/>
         </div>
 
