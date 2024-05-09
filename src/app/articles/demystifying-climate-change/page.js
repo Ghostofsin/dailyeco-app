@@ -12,13 +12,19 @@ import ArticleMetaEnd from "@/components/articles/articleMetaEnd/ArticleMetaEnd"
 
 export const metadata = {
   title: "Demystifying Climate Change: Your Essential Guide to the Planet's Hottest Topic",
-  description: "The topic that will not leave you indifferent and will help you understand the causes of global climate change  ",
+  description: "The topic that will not leave you indifferent and will help you understand the causes of global climate change",
   openGraph: {
     type: 'article',
+    siteName: 'dailyEco',
     url: `${process.env.ARTICLE_LINK_URL}/articles/demystifying-climate-change`,
-    title: 'Заголовок_для_article_1',
-    description: 'Описание_для_article_1',
-    images: [`${process.env.ARTICLE_LINK_URL}/images/article/discuss-Earth.png`],
+    title: "Demystifying Climate Change",
+    description: "Your Essential Guide to the Planet's Hottest Topic",
+    images: [
+      {url: `${process.env.ARTICLE_LINK_URL}/images/article/preview.png`,
+      width: 600,
+      height: 315,
+      }
+    ],
   },
 };
 
