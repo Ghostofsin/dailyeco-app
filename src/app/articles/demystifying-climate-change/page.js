@@ -313,7 +313,7 @@ export default function FirstArticlePage() {
 
             <div className={styles.quote}>
               <div className={styles.quoteHeader}>
-                <div className={styles.quoteLeft}>
+                
                   <div className={styles.quoteSing}>
                     <Image
                       src="/images/article/vector/quote.svg"
@@ -322,6 +322,7 @@ export default function FirstArticlePage() {
                       alt="blue quote"
                     ></Image>
                   </div>
+                  <div className={styles.quoteLeft}>
                   <QuoteAuthor
                     name={"Sir David Attenborough"}
                     position={

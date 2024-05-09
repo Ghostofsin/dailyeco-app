@@ -12,6 +12,7 @@ export const metadata = {
 
 export default async function DashboardPage() {
   const session = await auth();
+  console.log(session)
   const results = await getResults();
   const user = await getUserByEmail(session.user.email);
 

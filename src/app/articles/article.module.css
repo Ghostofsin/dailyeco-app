@@ -153,6 +153,7 @@ position: relative;
   display: flex;
   flex-direction: row;
   gap: 32px;
+  padding: 0 24px;
 }
 
 .articleMetaEnd{

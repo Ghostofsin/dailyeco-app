@@ -37,10 +37,12 @@ export default function SocialMedia() {
 	return (
 		<div >
 		<ul className={styles.networksBlockPics}>
-		{socialMediaList.map((item) => (
+		{socialMediaList.map((item) => {
+			const link = `${process.env.ARTICLE_LINK_URL}${pathname}`;
+			return (
 			<li key={item.title}>
 		
-				<Link href={item.link?.replace("URL_PAGE_TO_SHARE", `${process.env.ARTICLE_LINK_URL}${pathname}` )} target='_blank'>
+				<Link href={item.link.replace("URL_PAGE_TO_SHARE", link)} target='_blank'>
 				<Image
 					src={item.path}
 					width={28}
@@ -49,8 +51,8 @@ export default function SocialMedia() {
 				></Image>
 				</Link>
 				
-				</li>
-				))}
+			</li>)
+})}
 		</ul>
 
 	</div>

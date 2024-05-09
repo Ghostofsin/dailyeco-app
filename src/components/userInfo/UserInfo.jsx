@@ -14,7 +14,7 @@ export default async function UserInfo({session}) {
 			/>
 			<div className={styles.userDetail}>
 				<span className={styles.username}>{session?.user.name}</span>
-				<span className={styles.userTitle}>Administrator</span>
+				{/* <span className={styles.userTitle}>Administrator</span> */}
 			</div>
 		</div>
 

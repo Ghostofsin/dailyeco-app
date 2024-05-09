@@ -20,3 +20,10 @@
 .circleImg {
   border-radius: 50%;
 }
+
+@media only screen and (max-width: 510px) {
+  .quoteAuthor {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
