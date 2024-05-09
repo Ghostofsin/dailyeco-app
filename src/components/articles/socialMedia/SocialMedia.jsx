@@ -33,13 +33,12 @@ const socialMediaList = [
 
 export default function SocialMedia() { 
 	const pathname = usePathname()
-
+	const link = `https://www.dailyeco.org${pathname}`;
+	console.log(link)
 	return (
 		<div >
 		<ul className={styles.networksBlockPics}>
-		{socialMediaList.map((item) => {
-			const link = `${process.env.ARTICLE_LINK_URL}${pathname}`;
-			return (
+		{socialMediaList.map((item) =>  (
 			<li key={item.title}>
 		
 				<Link href={item.link.replace("URL_PAGE_TO_SHARE", link)} target='_blank'>
@@ -51,8 +50,9 @@ export default function SocialMedia() {
 				></Image>
 				</Link>
 				
-			</li>)
-})}
+			</li>
+			)
+)}
 		</ul>
 
 	</div>
