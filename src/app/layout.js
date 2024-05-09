@@ -13,6 +13,12 @@ export const metadata = {
     template: "%s | dailyEco",
   },
   description: "dailyEco is the best resourse about eco life",
+  verification: {
+    google: 'google',
+    yandex: 'yandex',
+    yahoo: 'yahoo',
+  },
+  keywords: ['climate change', 'eco life', 'environment'],
 };
 
 export default function RootLayout({ children }) {

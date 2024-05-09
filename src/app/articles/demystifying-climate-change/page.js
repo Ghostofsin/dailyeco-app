@@ -23,8 +23,15 @@ export const metadata = {
       {url: `${process.env.ARTICLE_LINK_URL}/images/article/preview.png`,
       width: 600,
       height: 315,
+      alt: 'article preview',
       }
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Demystifying Climate Change",
+    description: "Your Essential Guide to the Planet's Hottest Topic",
+    images: [`${process.env.ARTICLE_LINK_URL}/images/article/preview.png`], 
   },
 };
 
