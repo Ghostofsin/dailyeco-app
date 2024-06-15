@@ -1,6 +1,9 @@
 .mainSection {
   background-color: #133145;
 }
+.headMenu{
+  padding: 0 32px;
+}
 
 .mainContainer {
   max-width: 1280px;

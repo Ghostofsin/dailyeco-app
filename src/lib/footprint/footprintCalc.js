@@ -1,146 +1,120 @@
 
-const emissionFactorPerLiter = {
-  gazoline: 2.35, // kg/l
-  disel: 2.68,
-	gaz: 1.95,
-	kerasine: 3.15,
-	electro: 0.5, // kg/km
-};
-
-const transportType = {
-	car: 0.07, // l/km
-	bus: 0.2,
-	train: 20,
-	truck: 0.3,
-	motorbike: 0.05,
-	yaht: 2,
-	ship: 1.5,
-	smallboat: 1,
-	cruiseship: 2.5,
-	shortDiastancePlane: 2,
-	longDiastancePlane: 3,
-
-	tram: 0.4, // kwat*hour/km
-	trolleybus: 0.3,
-	electroCar: 0.2,
-	electroTrain: 2.5,
-	subway: 0.9
+const emissions = {
+	gazoline : {
+		emission : 2.35,
+		transport : [ "car", "motorbike", "smallboat"]
+	},
+	disel : {
+		emission : 2.68,
+		transport : ['truck','bus','yaht','ship','train']
+	} ,
+	gaz : {
+		emission : 1.95,
+		transport : ["cruiseship"]
+	} ,
+	kerasine : {
+		emission : 3.15,
+		transport : ['shortDiastancePlane', 'longDiastancePlane']
+	} ,
+	electro : {
+		emission : 0.5,
+		transport : ['tram','trolleybus','electroCar','electroTrain','subway']
+	} 
 }
 
-const averagePassengers = {
-	car: 2,
-	bus: 18,
-	train: 250,
-	truck: 1,
-	motorbike: 1,
-	yaht: 20,
-	ship: 1500,
-	smallboat: 12,
-	cruiseship: 1500,
-	shortDiastancePlane: 100,
-	longDiastancePlane: 200,
-
-	tram: 50, 
-	trolleybus: 50,
-	electroCar: 2,
-	electroTrain: 350,
-	subway: 350
+const transportCharacteristics = {  
+	// l/km
+	car: {
+		consumption: 0.07,
+		averagePassengers: 2,
+	},
+	bus: {
+		consumption: 0.2,
+		averagePassengers: 18,
+	},
+	train: {
+		consumption: 20,
+		averagePassengers: 250,
+	},
+	truck: {
+		consumption: 0.3,
+		averagePassengers: 1,
+	},
+	motorbike: {
+		consumption: 0.05,
+		averagePassengers: 1,
+	},
+	yaht: {
+		consumption: 2,
+		averagePassengers: 20,
+	},
+	ship: {
+		consumption: 1.5,
+		averagePassengers: 150,
+	},
+	smallboat: {
+		consumption: 1,
+		averagePassengers: 12,
+	},
+	cruiseship: {
+		consumption: 2.5,
+		averagePassengers: 1500,
+	},
+	shortDiastancePlane: {
+		consumption: 2,
+		averagePassengers: 100,
+	},
+	longDiastancePlane: {
+		consumption: 3,
+		averagePassengers: 200,
+	},
+// kwat*hour/km
+	tram: {
+		consumption: 0.4,
+		averagePassengers: 50,
+	},
+	trolleybus: {
+		consumption: 0.3,
+		averagePassengers: 50,
+	},
+	electroCar: {
+		consumption: 0.2,
+		averagePassengers: 2,
+	},
+	electroTrain: {
+		consumption: 2.5,
+		averagePassengers: 350,
+	},
+	subway: {
+		consumption: 0.9,
+		averagePassengers: 350,
+	},
 }
 
 export default function footprintCalc(transport, distance) {
 
 	let emission
 	let passengers
+	let consumption
 
-	switch (transport) {
-		case "car":
-		case "motorbike":
-		case "smallboat":
-			emission = emissionFactorPerLiter.gazoline
-			break;
-		case 'truck':
-		case 'bus':
-		case 'yaht':
-		case 'ship':
-		case 'train':
-			emission = emissionFactorPerLiter.disel
-			break;
-		case 'cruiseship':
-			emission = emissionFactorPerLiter.gaz
-			break;
-		case 'shortDiastancePlane':
-		case 'longDiastancePlane':
-			emission = emissionFactorPerLiter.kerasine
-		break
-		case 'tram':
-		case 'trolleybus':
-		case 'electroCar':
-		case 'electroTrain':
-		case 'subway':
-			emission = emissionFactorPerLiter.electro
-		break
+	for (const property in emissions) {
+    if (emissions[property].transport.includes(transport)) emission = emissions[property].emission
 	}
 
-	switch (transport) {
-		case "car":
-			 passengers = averagePassengers.car
-			 break;
-		case "motorbike":
-			passengers = averagePassengers.motorbike
-			break;
-		case "smallboat":
-			passengers = averagePassengers.smallboat
-			break;
-		case 'truck':
-			passengers = averagePassengers.truck
-			break;
-		case 'bus':
-			passengers = averagePassengers.bus
-			break;
-		case 'yaht':
-			passengers = averagePassengers.yaht
-			break;
-		case 'ship':
-			passengers = averagePassengers.ship
-			break;
-		case 'train':
-			passengers = averagePassengers.train
-			break;
-		case 'cruiseship':
-			passengers = averagePassengers.cruiseship
-			break;
-		case 'shortDiastancePlane':
-			passengers = averagePassengers.shortDiastancePlane
-			break;
-		case 'longDiastancePlane':
-			passengers = averagePassengers.longDiastancePlane
-			break;
-		case 'tram':
-			passengers = averagePassengers.tram
-			break;
-		case 'trolleybus':
-			passengers = averagePassengers.trolleybus
-			break;
-		case 'electroCar':
-			passengers = averagePassengers.electroCar
-			break;
-		case 'electroTrain':
-			passengers = averagePassengers.electroTrain
-			break;
-		case 'subway':
-			passengers = averagePassengers.subway
-			break;
+	for (const property in transportCharacteristics) {
+    if (property === transport) {
+			passengers = transportCharacteristics[property].averagePassengers
+			consumption = transportCharacteristics[property].consumption
+		} 
 	}
 
+	// console.log("emmision", emission)
 
-	console.log("emmision", emission)
-	console.log("transportType[transport]" , transportType[transport] )
-
-	if(!transport || !distance){
+	if(!transport || !distance || typeof distance !== "number"){
 		return 0
 	}
 
-	const result =  Math.round(transportType[transport] * emission * parseInt(distance) / passengers)
+	const result =  Math.round(consumption * emission * parseInt(distance) / passengers)
 	console.log("result", result)
 	return result
 }

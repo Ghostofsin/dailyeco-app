@@ -2,6 +2,9 @@
   height: 100vh;
   width: 100vw;
 }
+.headMenu{
+  padding: 0 32px;
+}
 
 .topBackground {
   height: 380px;

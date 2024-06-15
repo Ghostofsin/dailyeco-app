@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./transport.module.css";
 import footprintCalc from "@/lib/footprint/footprintCalc";
 
+
 export default function Transport({ transportType, footprintChange }) {
   const [distanceValue, setDistanceValue] = useState(0);
   const [transportValue, setTransportValue] = useState("");
@@ -14,18 +15,14 @@ export default function Transport({ transportType, footprintChange }) {
   };
 
   const handleChangeInput = (event) => {
-    setDistanceValue(event.target.value);
+    setDistanceValue(+event.target.value);
   };
 
   useEffect(() => {
     const calc = footprintCalc(transportValue, distanceValue);
     setFootprint(calc);
-  }, [distanceValue, transportValue]);
-
-  useEffect(() => {
-    // Передаем новое значение в родительский компонент
-    footprintChange(footprint);
-  }, [footprint]);
+    footprintChange(footprint); // put new value to parent component
+  }, [distanceValue, transportValue, footprint]);
 
   return (
     <form className={styles.transportType}>
@@ -38,6 +35,7 @@ export default function Transport({ transportType, footprintChange }) {
         </label>
         <div className={styles.tranportList}>
           <select
+            id={transportType.name}
             name={transportType.name}
             onChange={handleChangeSelect}
           >
@@ -65,6 +63,7 @@ export default function Transport({ transportType, footprintChange }) {
         <input
           className={styles.distance}
           name="distance"
+          id="distance"
           onChange={handleChangeInput}
         />
       </div>

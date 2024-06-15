@@ -15,7 +15,9 @@ export const metadata = {
 export default function ResourcesPage() {
   return (
     <div className={styles.container}>
+      <div className={styles.headMenu}>
       <Header />
+      </div>
 
       <section className={styles.siteHeader}>
         <h1 className={styles.title1}>Empower Yourself:</h1>

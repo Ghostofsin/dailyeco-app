@@ -12,17 +12,22 @@ const criteria = {
 
 
 export default function countRightAnswers(formData) {
+  console.log(formData)
   let sum = 0;
+  if (!formData) return sum
 
 	formData.forEach((value, key) => {
+console.log(value)
 		if (criteria[key]) {
-				if (criteria[key].includes(value) && key !== "quest7") {
-					sum++;
-				}
-			} else {
-					sum += 3;
-			}
+				if (criteria[key].includes(value)) {
+          if (key !== "quest7") {
+            sum++;
+          } else {
+            sum += 3;
+          }
+        }
+		}
 	});
-
+console.log(sum)
   return sum;
 }

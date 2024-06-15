@@ -19,7 +19,10 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className={styles.container}>
+      <div className={styles.headMenu}>
       <Header />
+      </div>
+      
 
       <section className={styles.siteHeader}>
         <div className={styles.siteHeaderGrid}>

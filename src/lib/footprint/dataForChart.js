@@ -56,8 +56,6 @@ export default function footprintChartShowResult(array) {
 			"Total": +el.total
     })
   );
-
-
-
+  
   return data;
 }

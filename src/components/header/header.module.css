@@ -8,11 +8,12 @@
   background-color: rgb(223, 250, 226);
 }
 .headerContainer {
-  margin: 0 5%;
+  /* margin: 0 5%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-sizing:border-box;
 }
 
 .logo {

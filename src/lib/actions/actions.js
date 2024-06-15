@@ -8,6 +8,7 @@ import { redirect } from "next/navigation";
 
 export async function saveResults(formData) {
   const sum = countRightAnswers(formData);
+  console.log(sum)
   const { userId } = Object.fromEntries(formData);
   let success = false;
   try {
@@ -35,6 +36,7 @@ export async function saveResults(formData) {
 
 export async function updateResults(formData) {
   const sum = countRightAnswers(formData);
+  console.log(sum)
   const { userId } = Object.fromEntries(formData);
   let success = false;
   try {

@@ -1,0 +1,16 @@
+name: CI
+on: [push]
+jobs: 
+  basic-checks:
+   name: Lint and tests
+   runs-on: ubuntu-latest
+
+   steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install packedges
+      run: npm ci
+    - name: Run Eslint
+      run: npm run lint
+    - name: Run unit tests
+      run: npm run test

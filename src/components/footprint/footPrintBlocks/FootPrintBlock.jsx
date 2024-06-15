@@ -112,8 +112,7 @@ export default function FootPrintBlock({ userId }) {
   };
 
   const totalFootprint = Object.values(footprints).reduce(
-    (acc, curr) => acc + curr,
-    0
+    (acc, curr) => acc + curr, 0
   );
 
   return (
